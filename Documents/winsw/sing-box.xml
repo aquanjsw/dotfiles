@@ -1,0 +1,25 @@
+<service>
+
+  <id>sing-box</id>
+
+  <executable>%ProgramData%\scoop\shims\sing-box.exe</executable>
+
+  <name>sing-box</name>
+
+  <description>Tunnel tool</description>
+
+  <arguments>run -C %ALLUSERSPROFILE%\sing-box</arguments>
+
+  <startmode>Automatic</startmode>
+
+  <!--
+  <delayedAutoStart>true</delayedAutoStart>
+    -->
+  
+  <depend>tcpip</depend>
+   
+  <logpath>%ALLUSERSPROFILE%\sing-box\log</logpath>
+
+  <log mode="reset"/>
+
+</service>
