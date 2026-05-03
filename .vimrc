@@ -24,7 +24,8 @@ catch
   echom 'Installing vim-plug...'
 
   if s:is_win
-    silent !powershell -Command 'iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim | ni $HOME/vimfiles/autoload/plug.vim -Force'
+    silent !pwsh -c mkdir $HOME/vimfiles/autoload
+    silent !pwsh -c curl -sL https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim -o $HOME/vimfiles/autoload/plug.vim
   else
     silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   endif

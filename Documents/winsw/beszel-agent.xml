@@ -1,0 +1,23 @@
+<service>
+
+  <id>beszel-agent</id>
+
+  <executable>%ProgramData%\scoop\shims\beszel-agent.exe</executable>
+
+  <name>beszel-agent</name>
+
+  <description>Beszel Agent</description>
+
+  <startmode>Automatic</startmode>
+
+  <!--
+  <delayedAutoStart>true</delayedAutoStart>
+    -->
+  
+  <depend>tcpip</depend>
+   
+  <logpath>%TMP%\beszel-agent\log</logpath>
+
+  <log mode="reset"/>
+
+</service>
