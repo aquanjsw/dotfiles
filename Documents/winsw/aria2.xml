@@ -1,0 +1,21 @@
+<service>
+
+  <id>aria2</id>
+
+  <executable>%ProgramData%\scoop\shims\aria2c.exe</executable>
+
+  <name>aria2</name>
+
+  <description>Downloader</description>
+
+  <arguments> -c -i %ALLUSERSPROFILE%\aria2\session --enable-rpc --save-session=%ALLUSERSPROFILE%\aria2\session --rpc-secret=%ARIA2_RPC_SECRET% --rpc-listen-all --rpc-allow-origin-all </arguments>
+
+  <startmode>Automatic</startmode>
+
+  <depend>tcpip</depend>
+
+  <logpath>%ALLUSERSPROFILE%\aria2\log</logpath>
+
+  <log mode="reset"/>
+
+</service>

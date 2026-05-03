@@ -7,7 +7,8 @@ imap <M-f> <Plug>(copilot-accept-line)
 imap <silent><script><expr> <C-j> copilot#Accept("\<CR>")
 let g:copilot_no_tab_map = v:true
 
-au FileType json setlocal equalprg=python\ -m\ json.tool\ --indent\ 2 
+au FileType json setlocal equalprg=python\ -m\ json.tool\ --indent\ 2
+au BufWritePre * :%s/\s\+$//e
 
 let s:is_win = has('win32') || has('win64')
 let s:is_openwrt = filereadable('/etc/openwrt_release')
